@@ -1,0 +1,69 @@
+domain = [["False", "-1"], ["True", "1"]]
+
+[system]
+role = "system"
+content = """
+You are an assistant whose role is binary classification; you will be provided data from an email,
+and context about the target audience/individual. Your job is to classify according to the user's
+statement, completing the space inside the brackets. You will ONLY answer with:
+"False" to answer negatively to the statement
+"True" to answer positively to the affirmation
+NOTE: DO NOT include the quotation marks "" in your classification, DO NOT answer anything other than the class.
+"""
+
+# Technical Indicators 
+
+# q1
+[[questions]]
+role = "user"
+content = """Concerning the previous email, the statement: "the sender's name is unrelated to the sender's email address, including the reply-to address" is {}"""
+
+# q2
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the statement: "a domain name which is plausibly similar to a recognizable entity's domain is used in the sender's email address" is {}"""
+
+
+# Visual Presentation Indicators
+
+# q3
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the statement: "the email is missing appropiate branding elements, such as text or logos" is {}"""
+
+# q4
+[[questions]]
+role ="user"
+content = """Concerning the previous email and its target audience, the statement: "the design and formatting of the email appears unprofessional. e.g., line jumps in the middle of sentences, abnormal formatting, inappropiate language for the email's premise" is {}"""
+
+# Language & Content
+
+# q5
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the statement: "the email is missing a generic greeting, such as a formal or informal salutation" is {}"""
+
+# q6
+[[questions]]
+role ="user"
+content = """Concerning the previous email and its target audience, the statement: "the email is missing personalization. e.g., a specific recipient name" is {}"""
+
+# q7
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the statement: "the email is missing important details about the sender, such as sender/contact information or a signature" is {}"""
+
+# Common Tactics
+# q8
+[[questions]]
+role ="user"
+content = """Concerning the previous email and its target audience, the statement: "the email appears to be a work or business-related practice. e.g., notifications, package delivery" is {}"""
+
+# q9
+[[questions]]
+role ="user"
+content = """Concerning the previous email and its target audience, the statement: "the email appears to be from a friend, colleague, boss, other authority entity, or reputable authority entity" is {}"""
+
+
+
+

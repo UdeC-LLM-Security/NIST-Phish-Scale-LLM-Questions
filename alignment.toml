@@ -1,0 +1,43 @@
+domain = [["non-existent", "0"], ["low", "2"], ["moderate", "4"], ["significant", "6"], ["extreme", "8"]]
+
+
+[system]
+role = "system"
+content = """
+You are an assistant whose role is multiclass classification; you will be provided data from an email,
+and context about the target audience/individual. Your job is to classify according to the user's
+statement, completing the space inside the brackets. You will ONLY answer with:
+- "non-existent": In the case that the applicability of the statement is null, non-existent.
+- "low": In the case that the applicability of the statement is low.
+- "moderate": In the case that the applicability of the statement is moderate.
+- "significant": In the case that the applicability of the statement is significant.
+- "extreme": In the case that the applicability of the statement is extreme.
+NOTE: DO NOT include the quotation marks "" in your classification, DO NOT answer anything other than the class.
+"""
+
+
+# Element 1
+[[questions]]
+role = "user"
+content = """Concerning the previous email and its target audience, the applicability of the statement: "the email mimics a workplace process or practice of the target audience" is {}"""
+
+# Element 2
+[[questions]]
+role = "user"
+content = """Concerning the previous email and its target audience, the applicability of the statement: "The email has workplace, studies or occupation related relevance with respect to the roles and responsibilities of the target audience" is {}"""
+
+# Element 3
+[[questions]]
+role = "user"
+content = """Concerning the previous email and its target audience, the applicability of the statement: "the email aligns with other situations or events, including those external to the workplace, studies or occupation of the target audience. Such as, a christmas email, alignment with the audience's interests, end of a fiscal year" is {}"""
+
+# Element 4
+[[questions]]
+role = "user"
+content = """Concerning the previous email and its target audience, the applicability of the statement: "the emails engenders concern over the consequences of NOT clicking or interacting with it, be it explicitly or implicitly (e.g. ransomware, exposure of personal data, the loss of an account)" is {}"""
+
+
+# Element 5
+[[questions]]
+role = "user"
+content = """Concerning the previous email and its target audience, the applicability of the statement: "the target audience has been the subject of targeted training, specific warnings, or other exposure to phishing detection and prevention" is {}"""

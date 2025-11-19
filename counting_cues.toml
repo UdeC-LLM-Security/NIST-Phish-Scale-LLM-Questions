@@ -1,0 +1,114 @@
+domain = "count"
+
+
+[system]
+role = "system"
+content = """
+You are an assistant whose role is to count cues; you will be provided data from an email,
+and context about the target audience/individual. Your job is to count the elements in the email 
+(this may include headers and/or body) that match the user's statement, completing the space inside
+the brackets. You will ONLY answer with an integer equal to or greater than zero.
+NOTE: Do not include any additional text or reasoning, only respond with the count number.
+"""
+
+# Errors
+
+# q10
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of spelling or ortography errors (this is, punctuation, spacing, capitalization) is {}"""
+
+# q11
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of grammatical errors, such as mismatched plurality is {}"""
+
+# q12
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of inconsistencies (e.g., the attachment type is not the one mentioned in the email, sender's signature does not mach sender name) is {}"""
+
+# Technical Indicators
+
+# q13
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of potentially dangerous attachments is {}"""
+
+# q14
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of URLs hidden as hyperlinks is {}"""
+
+# q15
+[[questions]]
+role ="user"
+content = """Concerning the previous email and its target audience, the number of occurrences of links with a domain which is plausibly similar to a recognizable entity's domain in the email is {}"""
+
+# Visual Presentation Indicators
+
+# q16
+[[questions]]
+role = "user"
+content = """Concerning the previous email, the number of occurrences of branding elements (texts or logos) that appear to be an imitation is {}"""
+
+# q17
+[[questions]]
+role = "user"
+content = """Concerning the previous email, the number of occurrences of branding elements (texts or logos) that appear to be out of date is {}"""
+
+# q18
+[[questions]]
+role = "user"
+content = """Concerning the previous email, the number of occurrences of inappropiate security indicators or security icons is {}"""
+
+# Language & Content
+
+# q19
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of usage of legal language, e.g., copyright information, security warnings, disclaimers, tax information (NOTE: not all fine print is a disclaimer) is {}"""
+
+# q20
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of detailed aspects that are not central to the content of the message is {}"""
+
+# q21
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of explicit requests for sensitive information, or any other thing related to the identity of an individual/organization or their finances (e.g., login credentiales, social security number) is {}"""
+
+# q22
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of expressions of time pressure, be it implicitly of explicitly (e.g., usage of word "immediately") is {}"""
+
+# q23
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of threats or threatening language, including implied threats (be it legal, professional, personal) is {}"""
+
+# Common Tactics
+
+# q24
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of appeals to help others (e.g., attempts to garner support for a charitable cause or similar humanitarian efforts) is {}"""
+
+# q25
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of offers that are too good to be true (e.g., winning a contest, paid vacations, or other unlikely monetary and/or material offerings) is {}"""
+
+# q26
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of offers that are personalized and unexpected "just for you" (e.g., valentine e-card from a secret admirer, special coupon for a purchase) is {}"""
+
+# q27
+[[questions]]
+role ="user"
+content = """Concerning the previous email, the number of occurrences of limited time offers (NOTE: only offerings of something explicit under a time/date limit) is {}"""
+
+
